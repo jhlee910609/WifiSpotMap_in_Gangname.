@@ -108,9 +108,9 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         Row[] rows = wifiData.getPublicWiFiPlaceInfo().getRow();
 
         for (Row row : rows) {
-            setList(row.getPLACE_NAME(), row.getINSTL_Y(), row.getINSTL_X());
-/*
-
+            saveList(row.getPLACE_NAME(), row.getINSTL_Y(), row.getINSTL_X());
+/*       ========== 메소드화 시켜줌 ============
+            // setLost(String name, double y, double x);
             datas.add(row.getPLACE_NAME());
             latLng_Y.add(row.getINSTL_Y());
             latLng_X.add(row.getINSTL_X());
@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     }
 
-    private void setList(String name, double y, double x) {
+    private void saveList(String name, double y, double x) {
         datas.add(name);
         latLng_X.add(x);
         latLng_Y.add(y);
